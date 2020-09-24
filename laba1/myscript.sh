@@ -3,6 +3,7 @@
 source calc
 source search
 source reverse
+source strlen
 
 case "$1" in
 "calc")
@@ -13,5 +14,8 @@ search "$2" "$3"
 ;;
 "reverse")
 reverse "$2" "$3"
+;;
+"strlen")
+strlen "$2"
 ;;
 esac

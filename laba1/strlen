@@ -1,0 +1,6 @@
+#!/bin/bash
+
+strlen()
+{
+echo | awk -v strr=$1 '{print "" length(strr)}'
+}
