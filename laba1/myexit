@@ -1,8 +1,11 @@
 #!/bin/bash
-
+source number
 myexit()
 {
-#iskl
+if ! $(number $1)
+then echo "Argument is not number!" 1>&2
+return 1
+fi
 echo "exit: $1"
 exit $1
 }
