@@ -1,0 +1,13 @@
+#!/bin/bash
+number()
+{
+re='^[0-9]+$'
+if ! [[ $1 =~ $re ]] ; then
+echo "Error: $1 not a number" 1>&2
+return 0
+else return 1
+fi
+}
+
+
+

@@ -1,7 +1,18 @@
 #!/bin/bash
+source number
 
 calc()
 {
+if (number $2) #!
+then echo "First argument not number!" 1>&2
+return 1
+fi
+
+if (number $3) #!
+then echo "Second argument not number!" 1>&2
+return 1
+fi
+
 case "$1" in
 "sum")
 echo "$(($2 + $3))"
@@ -17,7 +28,7 @@ echo "$(($2 * $3))"
 
 "div")
 if (("$3" == "0"))
-then echo "Div on zero!!!"
+then echo "Div on zero!!!" 1>&2
 else
 echo "$(($2 / $3))"
 fi

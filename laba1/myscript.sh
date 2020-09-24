@@ -5,6 +5,7 @@ source search
 source reverse
 source strlen
 source colors
+source myexit
 
 case "$1" in
 "calc")
@@ -34,4 +35,16 @@ then strlen "$2"
 else echo "I can have only 2 arguments!" 1>&2
 fi
 ;;
+
+#./mysript.sh exit 3
+"exit")
+if (($# == 1))
+then echo "exit: 0"
+exit 0
+elif (($# == 2))
+then myexit "$2"
+else echo "I can have only 2 arguments!" 1>&2 
+fi
+;;
+
 esac
