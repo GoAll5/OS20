@@ -2,8 +2,12 @@
 
 reverse()
 {
-
+#if [-f $HOME]
+if ! [ -f $1 ]
+then
+echo -e "I don't have this file: $1" 1>&2
+else tac $1 > $2
+fi
 #  first fail not riden and second not writing and have arguments
-tac $1 > $2
 }
 
