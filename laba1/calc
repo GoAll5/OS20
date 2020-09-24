@@ -1,5 +1,7 @@
 #!/bin/bash
 
+calc()
+{
 case "$1" in
 "sum")
 echo "$(($2 + $3))"
@@ -14,7 +16,12 @@ echo "$(($2 * $3))"
 ;;
 
 "div")
+if (("$3" == "0"))
+then echo "Div on zero!!!"
+else
 echo "$(($2 / $3))"
+fi
 ;;
 
 esac
+}
