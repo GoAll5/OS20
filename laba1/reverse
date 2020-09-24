@@ -2,7 +2,8 @@
 
 reverse()
 {
-# $1 > $2
+
+#  first fail not riden and second not writing and have arguments
 tac $1 > $2
 }
 

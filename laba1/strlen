@@ -2,5 +2,7 @@
 
 strlen()
 {
-echo | awk -v strr=$1 '{print "" length(strr)}'
+#echo | awk -v strr=$1 '{print "" length(strr)}'
+strr="$1"
+echo "${#strr}"
 }

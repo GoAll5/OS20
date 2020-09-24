@@ -2,5 +2,6 @@
 
 search()
 {
+#no directory
 grep -rn $2 /$1 # word /directory
 }
