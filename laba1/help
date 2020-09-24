@@ -1,0 +1,25 @@
+#!/bin/bash
+
+help() {
+
+echo "---------------------------------------HELP--------------------------------------------"
+
+echo "calc - ./myscript.sh calc (sum/div/mul/sub) (value1) (value2)"
+
+echo "search - ./myscript.sh search /home/user/first/laba1/ (echo)"
+
+echo "reverse - ./myscript.sh reverse /home/user/first/laba1/text.txt"
+echo "/home/user/first/laba1/text2.txt"
+
+echo "strlen - ./myscript.sh strlen (abcdefghklmopq)"
+
+echo "log - ./myscript.sh log"
+
+echo "exit - ./myscript.sh exit (value)"
+
+echo "help - ./myscript.sh help"
+
+echo "interactive - ./myscript.sh interactive (a/b/c/d/e/f/g/z)"
+echo "---------------------------------------------------------------------------------------"
+
+}

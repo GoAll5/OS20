@@ -4,8 +4,8 @@ source calc
 source search
 source reverse
 source strlen
-source colors
 source myexit
+source help
 
 case "$1" in
 "calc")
@@ -44,6 +44,14 @@ exit 0
 elif (($# == 2))
 then myexit "$2"
 else echo "I can have only 2 arguments!" 1>&2 
+fi
+;;
+
+
+"help")
+if (( $# == 1 ))
+then help
+else echo "I can have only 1 argument!" 1>&2
 fi
 ;;
 
