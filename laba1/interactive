@@ -26,6 +26,8 @@ case $command in
 "a")
 echo "Input sum/mul/div/sub"
 read com
+if [[ $com == "sum" || $com == "sub" || $com = "mul" || $com = "div" ]]
+then
 echo "Input value1"
 read val1
 echo "Input value2"
@@ -35,6 +37,8 @@ calc $com $val1 $val2
 echo ""
 read -n 1 command
 interactive
+else "I don't know command: $com" 1>&2
+fi
 ;;
 
 "b")
