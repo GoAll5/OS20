@@ -1,7 +1,8 @@
 #!/bin/bash
 
 git add .
-
-git commit -m "commit"
-
+if ($# == 0)
+then git commit -m "commit"
+else git commit -m "$1"
+fi
 git push origin master

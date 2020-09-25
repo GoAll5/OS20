@@ -1,11 +1,12 @@
 #!/bin/bash
-
+source log
 source calc
 source search
 source reverse
 source strlen
 source myexit
 source help
+source interactive
 
 case "$1" in
 "calc")
@@ -47,12 +48,30 @@ else echo "I can have only 2 arguments!" 1>&2
 fi
 ;;
 
-
 "help")
 if (( $# == 1 ))
 then help
 else echo "I can have only 1 argument!" 1>&2
 fi
+;;
+
+"log")
+if (( $# == 1 ))
+then log
+else echo "I can have only 1 arguments!" 1>&2
+fi
+;;
+
+
+"interactive")
+if (($# == 1))
+then interactive
+else echo "I can have only 1 argument!" 1>&2
+fi
+;;
+
+*)
+echo "I don't know $1 command" 1>&2
 ;;
 
 esac

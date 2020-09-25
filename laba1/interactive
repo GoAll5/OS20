@@ -1,0 +1,99 @@
+#!/bin/bash
+
+source calc
+source help
+source myexit
+source strlen
+source reverse
+source search
+source log
+
+interactive()
+{
+echo "----------------------------------------------------------------------------------------"
+echo "a - calc"
+echo "b - help"
+echo "c - exit"
+echo "d - strlen"
+echo "e - reverse"
+echo "f - log"
+echo "q - escape"
+echo "----------------------------------------------------------------------------------------"
+
+read -n 1 command
+echo ""
+case $command in
+"a")
+echo "Input sum/mul/div/sub"
+read com
+echo "Input value1"
+read val1
+echo "Input value2"
+read val2
+echo ""
+calc $com $val1 $val2
+echo ""
+read -n 1 command
+interactive
+;;
+
+"b")
+help
+echo ""
+read -n 1 command
+interactive
+;;
+
+"c")
+echo "Input number exit"
+read val1
+echo ""
+myexit $val1
+echo ""
+read -n 1 command
+interactive
+;;
+
+
+"d")
+echo "Input string"
+read val1
+echo ""
+strlen $val1
+echo ""
+read -n 1 command
+interactive
+;;
+
+"e")
+echo "Input file1"
+read val1
+echo ""
+echo "Input file2"
+read val2
+echo ""
+reverse $val1 $val2
+echo ""
+read -n 1 command
+interactive
+;;
+
+"f")
+log
+echo ""
+read -n 1 command
+interactive
+;;
+
+"q")
+echo "Escape"
+return 1
+;;
+
+*)
+echo "I don't know this command!!"
+interactive
+;;
+
+esac
+}

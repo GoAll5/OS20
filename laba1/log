@@ -1,0 +1,9 @@
+#!/bin/bash
+source colors
+
+log()
+{
+grep "WW" /var/log/anaconda/X.log | sed ''/WW/s//`printf "${yell}Warning:${endd}"`/" " > new.txt
+grep "II" /var/log/anaconda/X.log | sed ''/II/s//`printf "${bl}Information:${endd}"`/" " >> new.txt
+cat new.txt
+}

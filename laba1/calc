@@ -34,5 +34,8 @@ echo "$(($2 / $3))"
 fi
 ;;
 
+*)
+"I don't know $1 command" 1>&2
 esac
 }
+
