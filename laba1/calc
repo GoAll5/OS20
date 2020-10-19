@@ -7,7 +7,7 @@ if ! (number $2)
 then echo "First argument not number!" 1>&2
 return 1
 fi
-
+#comment
 if ! (number $3)
 then echo "Second argument not number!" 1>&2
 return 1
