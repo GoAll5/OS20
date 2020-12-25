@@ -19,7 +19,7 @@ then
 		fi
 		ln "$PWD/$file" "$trash/$newfilename"
 		rm -f $file
-			echo "$PWD/$file $newfilename" >> /home/user/.trash.log
+			echo "$PWD/$file=$newfilename" >> /home/user/.trash.log
 	else
 		echo "File not found"
 	fi
