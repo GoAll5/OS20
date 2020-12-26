@@ -5,6 +5,6 @@ K=$2
 
 for count in $(seq $K)
 do
-	./newmem.bash $N
+	./newmem.bash $N &
 	sleep 1
 done
