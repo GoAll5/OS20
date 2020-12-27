@@ -1,0 +1,16 @@
+ipconfig /all
+или 
+HOSTNAME
+
+"LAPTOP-MTG4U21S"
+
+net use a: "\\LAPTOP-MTG4U21S\temp"
+
+powershell -executionpolicy RemoteSigned -file C:\LAB6\task2_2.ps1
+
+powershell -executionpolicy RemoteSigned -file C:\LAB6\task2_3.ps1
+
+нажимаем ctrl+c
+
+повторяем копирование и оно продолжается
+powershell -executionpolicy RemoteSigned -file C:\LAB6\task2_2.ps1

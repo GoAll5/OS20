@@ -1,0 +1,10 @@
+
+VER > C:\LAB6\version.txt
+chkdsk | find "на диске." > C:\LAB6\mem.txt
+md TEST
+move version.txt TEST
+move mem.txt TEST
+cd TEST
+copy mem.txt+version.txt answer.txt
+del mem.txt
+del version.txt

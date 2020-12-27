@@ -1,0 +1,3 @@
+driverquery > C:\LAB6\DRIVERS.log
+
+sort /r C:\LAB6\DRIVERS.log > C:\LAB6\drivers_reverse.log
